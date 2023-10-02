@@ -1,0 +1,19 @@
+{
+  "name": "zhuksone/php-router",
+  "description": "Minimal router implementation for a php application",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zhuksone",
+      "email": "zhuksone@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Zhuksone\\Router\\": "src/"
+    }
+  }
+}
