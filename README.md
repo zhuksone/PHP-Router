@@ -18,17 +18,17 @@ Minimal router implementation for a php application
     Заполнить массив Router::$middleware, как показано на примере ниже,
     для будущей замены у конкретного $routeConfig его коротких имён middleware на полные
 
-    use \Middleware;
+    use Middleware;
     
     Router::middleware('short_name_your_middleware', yourNamespace\SomeMiddleware::class);
     Router::middleware('second_short_name_your_middleware', yourNamespace\SomeSecondMiddleware::class);
-    Router::middleware('Authorization', \Authorization::class);
-    Router::middleware('Authentication', \Authentication::class);    
+    Router::middleware('Authorization', Authorization::class);
+    Router::middleware('Authentication', Authentication::class);    
 ### Шаг третий:
     $routeConfig = Router::compareURI($_SERVER['REQUEST_URI']);
 
 Шаг №1 и шаг №2 можно поменять местами.
-Главное, чтобы в момент вызова метода Router::compareURI() короткие имена middleware и им принадлежащие классы же были добавлены в массив
+Главное, чтобы в момент вызова метода Router::compareURI($_SERVER['REQUEST_URI']) короткие имена middleware и им принадлежащие классы уже были добавлены в массив
 
 ### Дамп $routeConfig для uri '/post/123/comment/456':
 
