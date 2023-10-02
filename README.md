@@ -46,4 +46,5 @@ Minimal router implementation for a php application
                      'post'     =>  '123',
                      'comment'  =>  '456',
                      ],
-В поле 'Comparisons' нам доступны значения по именам, которые мы указали при создании:
+#### В поле 'Comparisons' нам доступны значения по именам, которые мы указали при назначении роута определённому uri:
+    Router::GET('/myRoute/{intKey}/', \SomeController::class, 'action')
